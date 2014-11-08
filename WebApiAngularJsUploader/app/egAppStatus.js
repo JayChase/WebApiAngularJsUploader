@@ -5,10 +5,9 @@
         .module('app')
         .directive('egAppStatus', egAppStatus);
 
-    //egAppStatus.$inject = ['appInfo'];
+    egAppStatus.$inject = ['appInfo'];
     
-    //function egAppStatus(appInfo) { 
-    function egAppStatus() { 
+    function egAppStatus(appInfo) {     
         var directive = {
             link: link,
             restrict: 'E',
@@ -16,18 +15,16 @@
         };
         return directive;
 
-        function link(scope, element, attrs) {
-            scope.busy = true;
-            scope.message = "hhh";
-            //scope.busy = appInfo.busy;
+        function link(scope, element, attrs) {     
+            scope.busy = appInfo.busy;
 
-            //scope.$watch(function () {
-            //    return appInfo.message;
-            //},
-            //function (newMsg) {
-            //    scope.message = newMsg;
-            //});
-            //scope.message = appInfo.message;
+            scope.$watch(function () {
+                return appInfo.message;
+            },
+            function (newMsg) {
+                scope.message = newMsg;
+            });
+            scope.message = appInfo.message;
         }
     }
 

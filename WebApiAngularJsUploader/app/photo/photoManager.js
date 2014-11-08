@@ -49,8 +49,7 @@
         function upload(photos)
         {
             service.uploading = true;
-            appInfo.busy = true;
-            appInfo.message = "uploading photo(s)";
+            appInfo.setInfo({ busy: true, message: "uploading photos" });            
 
             var formData = new FormData();
 
@@ -69,24 +68,23 @@
                                                 });
                                             }
 
-                                            appInfo.message = "photos uploaded successfully";
+                                            appInfo.setInfo({message: "photos uploaded successfully"});
 
                                             return result.$promise;
                                         },
                                         function (result) {
-                                            appInfo.message = "something went wrong: " + result.data.message;
+                                            appInfo.setInfo({message: "something went wrong: " + result.data.message});
                                             return $q.reject(result);
                                         })
                                         ['finally'](
                                         function () {
-                                            appInfo.busy = false;
+                                            appInfo.setInfo({ busy: false });                                            
                                             service.uploading = false;
                                         });
         }
 
         function remove(photo) {
-            appInfo.busy = true;
-            appInfo.message = "deleting photo " + photo.name;
+            appInfo.setInfo({ busy: true, message: "deleting photo " + photo.name });            
 
             return photoManagerClient.remove({fileName: photo.name})
                                         .$promise
@@ -95,17 +93,17 @@
                                             var i = service.photos.indexOf(photo);
                                             service.photos.splice(i, 1);
 
-                                            appInfo.message = "photos deleted";
+                                            appInfo.setInfo({message: "photos deleted"});
 
                                             return result.$promise;
                                         },
                                         function (result) {
-                                            appInfo.message = "something went wrong: " + result.data.message;
+                                            appInfo.setInfo({message: "something went wrong: " + result.data.message});
                                             return $q.reject(result);
                                         })
                                         ['finally'](
                                         function () {
-                                            appInfo.busy = false;
+                                            appInfo.setInfo({busy: false});
                                         });
         }
 

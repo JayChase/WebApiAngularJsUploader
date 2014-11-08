@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Tests>
   <Test>
-    <Name>app egAppStatus directive should compile as expected (Chrome 38.0.2125 (Windows 8.1))</Name>
-    <DisplayName>app egAppStatus directive should compile as expected (Chrome 38.0.2125 (Windows 8.1))</DisplayName>
+    <Name>app egAppStatus directive should show appInfo.message (Chrome 38.0.2125 (Windows 8.1))</Name>
+    <DisplayName>app egAppStatus directive should show appInfo.message (Chrome 38.0.2125 (Windows 8.1))</DisplayName>
     <Outcome>Passed</Outcome>
   </Test>
   <Test>
@@ -11,8 +11,8 @@
     <Outcome>Passed</Outcome>
   </Test>
   <Test>
-    <Name>app photoManager service load sets appInfo busy to true (Chrome 38.0.2125 (Windows 8.1))</Name>
-    <DisplayName>app photoManager service load sets appInfo busy to true (Chrome 38.0.2125 (Windows 8.1))</DisplayName>
+    <Name>app photoManager service load sets appInfo message (Chrome 38.0.2125 (Windows 8.1))</Name>
+    <DisplayName>app photoManager service load sets appInfo message (Chrome 38.0.2125 (Windows 8.1))</DisplayName>
     <Outcome>Passed</Outcome>
   </Test>
   <Test>
@@ -48,6 +48,51 @@
   <Test>
     <Name>app photoManager service photoExists returns false if name matches (Chrome 38.0.2125 (Windows 8.1))</Name>
     <DisplayName>app photoManager service photoExists returns false if name matches (Chrome 38.0.2125 (Windows 8.1))</DisplayName>
+    <Outcome>Passed</Outcome>
+  </Test>
+  <Test>
+    <Name>app photoManager service remove sets appInfo busy to true (Chrome 38.0.2125 (Windows 8.1))</Name>
+    <DisplayName>app photoManager service remove sets appInfo busy to true (Chrome 38.0.2125 (Windows 8.1))</DisplayName>
+    <Outcome>Passed</Outcome>
+  </Test>
+  <Test>
+    <Name>app photoManager service remove sets appInfo message (Chrome 38.0.2125 (Windows 8.1))</Name>
+    <DisplayName>app photoManager service remove sets appInfo message (Chrome 38.0.2125 (Windows 8.1))</DisplayName>
+    <Outcome>Passed</Outcome>
+  </Test>
+  <Test>
+    <Name>app photoManager service remove failed sets appInfo.message to error (Chrome 38.0.2125 (Windows 8.1))</Name>
+    <DisplayName>app photoManager service remove failed sets appInfo.message to error (Chrome 38.0.2125 (Windows 8.1))</DisplayName>
+    <Outcome>Passed</Outcome>
+  </Test>
+  <Test>
+    <Name>app photoManager service remove failed calls $q.reject() (Chrome 38.0.2125 (Windows 8.1))</Name>
+    <DisplayName>app photoManager service remove failed calls $q.reject() (Chrome 38.0.2125 (Windows 8.1))</DisplayName>
+    <Outcome>Passed</Outcome>
+  </Test>
+  <Test>
+    <Name>app photoManager service upload sets appInfo busy to true (Chrome 38.0.2125 (Windows 8.1))</Name>
+    <DisplayName>app photoManager service upload sets appInfo busy to true (Chrome 38.0.2125 (Windows 8.1))</DisplayName>
+    <Outcome>Passed</Outcome>
+  </Test>
+  <Test>
+    <Name>app photoManager service upload sets appInfo message (Chrome 38.0.2125 (Windows 8.1))</Name>
+    <DisplayName>app photoManager service upload sets appInfo message (Chrome 38.0.2125 (Windows 8.1))</DisplayName>
+    <Outcome>Passed</Outcome>
+  </Test>
+  <Test>
+    <Name>app photoManager service upload successful adds new photos to photos (Chrome 38.0.2125 (Windows 8.1))</Name>
+    <DisplayName>app photoManager service upload successful adds new photos to photos (Chrome 38.0.2125 (Windows 8.1))</DisplayName>
+    <Outcome>Passed</Outcome>
+  </Test>
+  <Test>
+    <Name>app photoManager service upload failed sets appInfo.message to error (Chrome 38.0.2125 (Windows 8.1))</Name>
+    <DisplayName>app photoManager service upload failed sets appInfo.message to error (Chrome 38.0.2125 (Windows 8.1))</DisplayName>
+    <Outcome>Passed</Outcome>
+  </Test>
+  <Test>
+    <Name>app photoManager service upload failed calls $q.reject() (Chrome 38.0.2125 (Windows 8.1))</Name>
+    <DisplayName>app photoManager service upload failed calls $q.reject() (Chrome 38.0.2125 (Windows 8.1))</DisplayName>
     <Outcome>Passed</Outcome>
   </Test>
   <Test>

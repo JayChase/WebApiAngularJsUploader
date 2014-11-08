@@ -5,6 +5,15 @@ describe('app egAppStatus directive', function () {
 
     beforeEach(module('app'));
     beforeEach(module('app/egAppStatus.html'));
+    beforeEach(module(function ($provide) {
+            mockAppInfo = sinon.stub({
+                busy: false,
+                message: 'test message',
+                setInfo: function () { }
+            });
+            
+            $provide.value('appInfo', mockAppInfo);
+    }));
         
     beforeEach(inject(function ($compile, $rootScope) {
             var scope = $rootScope;
@@ -12,18 +21,13 @@ describe('app egAppStatus directive', function () {
             scope.message = '';
 
             el = angular.element('<eg-app-status></eg-app-status>');
-            //mockAppInfo = sinon.stub({
-            //    busy: false,
-            //    message: 'test',
-            //    setInfo: function () { }
-            //});
-            
+                        
             $compile(el)(scope);
             scope.$digest();
             //console.log(el[0].outerHTML);
         }));
 
-    it('should compile as expected', function () { 
-        expect(true).toBe(true);
+    it('should show appInfo.message', function () { 
+        expect(el.text()).toContain("test message");
     });
 });

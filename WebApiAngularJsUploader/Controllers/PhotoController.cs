@@ -45,7 +45,7 @@ namespace WebApiAngularJsUploader.Controllers
             try
             {
                 var photos = await photoManager.Add(Request);
-                return Ok(new { Successful = true, Message = "Photos uploaded ok", Photos = photos });
+                return Ok(new { Message = "Photos uploaded ok", Photos = photos });
             }
             catch (Exception ex)
             {
@@ -68,7 +68,7 @@ namespace WebApiAngularJsUploader.Controllers
 
            if (result.Successful)
            {
-               return Ok(result.Message);
+               return Ok(new { message = result.Message});
            } else
            {
                return BadRequest(result.Message);
