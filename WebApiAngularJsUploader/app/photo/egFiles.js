@@ -5,10 +5,7 @@
         .module('app.photo')
         .directive('egFiles', egFiles);
 
-    egFiles.$inject = ['$parse'];
-    
-    //TODO make this simple it keeps the files and takes a uploader function and then passes the files to it coolio
-    function egFiles ($parse) {
+    function egFiles () {
 
         var directive = {
             link: link,
@@ -46,5 +43,4 @@
             }
         }
     }
-
 })();

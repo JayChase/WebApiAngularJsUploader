@@ -18,6 +18,11 @@ EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "WebApiAngularJsUploader.Test", "WebApiAngularJsUploader.Test\WebApiAngularJsUploader.Test.njsproj", "{7A977F93-9177-4916-A49A-779CC62233C5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "misc", "misc", "{2A6A88BA-2815-4BD0-A12F-89D1AFB9E498}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		License.txt = License.txt
+		readme.md = readme.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

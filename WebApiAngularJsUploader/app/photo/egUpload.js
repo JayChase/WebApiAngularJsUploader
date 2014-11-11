@@ -22,9 +22,8 @@
             var parentForm = element[0].form;
             if (parentForm) {
                 element.on('click', function (event) {
-                    //have to return promise to in case it is going to be used again
                     return scope.upload().then(function () {
-                        //see:https://docs.angularjs.org/error/$rootScope/inprog?p0=$digest for why needs to use timeout to avoid conflict
+                        //see:https://docs.angularjs.org/error/$rootScope/inprog?p0=$digest for why there is a need to use timeout to avoid conflict
                         $timeout(function () {
                             parentForm.reset();
                         });
@@ -33,5 +32,4 @@
             }
         }
     }
-
 })();

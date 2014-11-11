@@ -38,8 +38,6 @@
     <Compile Include="specs\app-photos-controller-spec.js" />
     <Compile Include="specs\app-welcome-controller-spec.js" />
     <Content Include="package.json" />
-    <Content Include="README.md" />
-    <Content Include="test-results.testxml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="specs\" />

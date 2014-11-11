@@ -1,7 +1,7 @@
 ﻿<form name="newPhotosForm" role="form" enctype="multipart/form-data" ng-disabled="appBusy || uploading">
     <div class="form-group" ng-hide="hasFiles">
         <label for="newPhotos">select and upload new photos</label>
-        <input type="file" id="newPhotos" accept="image/*" eg-files="photos" has-files="hasFiles" uploading="uploading" multiple>
+        <input type="file" id="newPhotos" accept="image/*" eg-files="photos" has-files="hasFiles" multiple>
     </div>
     <div class="form-group" ng-show="hasFiles && !uploading">
         <ul class="list-inline">
