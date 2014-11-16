@@ -3,11 +3,9 @@
 
     angular
         .module('app')
-        .factory('appInfo', appInfo);
+        .factory('appInfo', appInfo);    
 
-    appInfo.$inject = ['$http'];
-
-    function appInfo($http) {
+    function appInfo() {
         var service = {
             busy: false,
             message: '',
