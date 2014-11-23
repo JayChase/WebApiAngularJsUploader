@@ -5,9 +5,9 @@
         .module('app.photo')
         .controller('photos', photos); 
 
-    photos.$inject = ['$scope', 'photoManager'];
+    photos.$inject = ['photoManager'];
 
-    function photos($scope, photoManager) {
+    function photos(photoManager) {
         /* jshint validthis:true */
         var vm = this;
         vm.title = 'photo manager';

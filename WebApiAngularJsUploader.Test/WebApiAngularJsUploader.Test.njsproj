@@ -33,14 +33,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="karma.conf.js" />
-    <Compile Include="specs\app-egAppStatus-directive-spec.js" />
-    <Compile Include="specs\app-photoManager-service-spec.js" />
-    <Compile Include="specs\app-photos-controller-spec.js" />
-    <Compile Include="specs\app-welcome-controller-spec.js" />
+    <Compile Include="specs\app\app-egAppStatus-directive-spec.js" />
+    <Compile Include="specs\photo\app-photoManager-service-spec.js" />
+    <Compile Include="specs\photo\app-photos-controller-spec.js" />
+    <Compile Include="specs\photo\app-welcome-controller-spec.js" />
     <Content Include="package.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="specs\" />
+    <Folder Include="specs\app\" />
+    <Folder Include="specs\photo\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
 </Project>

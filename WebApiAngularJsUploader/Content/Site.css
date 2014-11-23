@@ -23,3 +23,8 @@ textarea {
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
 }
+
+.uploadFile::-ms-value {
+    visibility: collapse;
+}
+

@@ -16,15 +16,7 @@
         return directive;
 
         function link(scope, element, attrs) {     
-            scope.busy = appInfo.busy;
-
-            scope.$watch(function () {
-                return appInfo.message;
-            },
-            function (newMsg) {
-                scope.message = newMsg;
-            });
-            scope.message = appInfo.message;
+            scope.status = appInfo.status;
         }
     }
 
